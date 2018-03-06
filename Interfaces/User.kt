@@ -7,40 +7,25 @@
 
 interface User {
 
-    // Set the username
-    fun setUsername(name: String)
+    // User object constructor
+    fun User(id : String, username : String, name : String, bio : String, mail : String, friends : List<User>)
 
-    // Return the username
-    fun getUsername(): String
+    // Returns User's id
+    fun getId() : String
 
-    // Call the API to add the Playlist list
-    fun setMyPlaylists()
+    // Returns User's nickname
+    fun getUsername() : String
 
-    // Return the user's Playlist list
-    fun getMyPlaylists() : MutableList<Playlist>
+    // Returns User's name
+    fun getName() : String
 
-    // Call the API to add the Songs list
-    fun setMySongs()
+    // Returns User's bio
+    fun getBio() : String
 
-    // Return the user's Song list
-    fun getMySongs(): MutableList<Song>
+    // Returns User's mail
+    fun getMail() : String
 
-    // Call the API to add the Artists list
-    fun setMyArtists()
-
-    // Return the user's Artists list
-    fun getMyArtists(): MutableList<Artist>
-
-    // Call the API to add the Albums list
-    fun setMyAlbums()
-
-    // Return the user's Albums list
-    fun getMyAlbums(): MutableList<Album>
-
-    // Call the API to add the Playlist list
-    fun setMyFriends()
-
-    // Return the user's Friends list
-    fun getMyFriends() : MutableList<User>
+    // Returns list of User's friends
+    fun getFriends() : List<User>
 
 }

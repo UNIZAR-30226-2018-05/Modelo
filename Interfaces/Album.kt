@@ -5,32 +5,14 @@
  */
 
 
-interface Album {
+interface Album : SongListWithImage {
 
-    // Call the API to set the name of song
-    fun setName()
-
-    // Return the name of song
-    fun getName(): String
-
-    // Call the API to Set the Artist or the Artists of song
-    fun setArtist()
+    // Album object constructor
+    override fun Album(name : String = "Sin nombre", songs : List<Song>, image : String, creationDate : Date,
+                       artists : List<Artist>)
 
     // Return the Artist or the Artists of song
     fun getArtist(): List<Artist>
-
-    // Call the API to set the Songs of Album
-    fun setSongs()
-
-    // Return the Songs of album
-    fun getSongs(): List<Song>
-
-
-    // Call the API to set the Cover's Album
-    fun setCover()
-
-    // Return the Cover's Album
-    fun getCover(): String
 
 
 }
