@@ -1,3 +1,3 @@
 package cierzo.modelo.util
 
-class Date
+expect class Date

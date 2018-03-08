@@ -1,5 +1,7 @@
 package cierzo.modelo.interfaces
 
+import cierzo.modelo.util.File
+
 interface Facade{
 
     /********************************************************************/
@@ -14,7 +16,7 @@ interface Facade{
      * @param pag: View page number
      * @param limit: Maximum number of songs in the view
      */
-    fun fetchSongsArtist(artist: Artist, pag: Int, limit: Int) : SongList
+    fun fetchArtistsSong(artist: Artist, pag: Int, limit: Int) : SongList
 
     /**
      * Call the API to return the genre's song list
@@ -23,7 +25,7 @@ interface Facade{
      * @param pag: View page number
      * @param limit: Maximum number of songs in the view
      */
-    fun fetchSongsGenre(genre: String, pag: Int, limit: Int) : SongList
+    fun fetchGenresSongs(genre: String, pag: Int, limit: Int) : SongList
 
     /**
      * Call the API to return the songs with the same name

@@ -1,4 +1,3 @@
 package cierzo.modelo.util
 
-expect class File {
-}
+expect class File
