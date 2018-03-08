@@ -16,7 +16,7 @@ interface Facade{
      * @param pag: View page number
      * @param limit: Maximum number of songs in the view
      */
-    fun fetchArtistsSong(artist: Artist, pag: Int, limit: Int) : SongList
+    fun fetchArtistsSongs(artist: Artist, pag: Int, limit: Int) : SongList
 
     /**
      * Call the API to return the genre's song list
@@ -90,7 +90,7 @@ interface Facade{
      * @param name: Name of the new playlist
      * @param description: Description of the new playlist
      */
-    fun createPlaylist(user: User, songList: SongList, name: String, description: String)
+    fun createPlaylist(name: String, description: String)
 
     /**
      * Call the API to update a Playlist
@@ -115,7 +115,7 @@ interface Facade{
      * @param idList: Id's playlist
      * @param idSong: Id's song to add
      */
-    fun addSongtoPlaylist(idList: String, idSong: String)
+    fun addSongToPlaylist(idList: String, idSong: String)
 
     /**
      * Call the API to delete a song in a Playlist
@@ -123,7 +123,7 @@ interface Facade{
      * @param idList: Id's playlist
      * @param idSong: Id's song to delete
      */
-    fun deleteSongtoPlaylist(idList: String, idSong: String)
+    fun deleteSongFromPlaylist(idList: String, idSong: String)
 
 
     /********************************************************************/
@@ -223,21 +223,21 @@ interface Facade{
     fun updateCredentialsAccount(idUser: String, user: User)
 
     /**
-     * Call the API to obtain the moment of the ultimate song
+     * Call the API to obtain the moment of the last song playing
      * Param:
      * @param idUser: id's user
      */
-    fun obtainUltimateSong(idUser: String): Song
+    fun fetchSongMoment(): Song
 
     /**
-     * Call the API to save the moment of the ultimate song
+     * Call the API to save the moment of the last song playing
      * Param:
      * @param idUser: id's user
      * @param playList: Playlist that I was listening
      * @param song: Song that I was listening
      * @param time: Time's song that I was listening
      */
-    fun saveUltimateSong(idUser: String, playList: SongList, song: Song, time: Int)
+    fun saveSongMoment(idUser: String, playList: SongList, song: Song, time: Int)
 
 
 

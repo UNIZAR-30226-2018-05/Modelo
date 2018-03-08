@@ -2,17 +2,15 @@ package cierzo.modelo.interfaces
 
 /**
  *
- * The Artist class represents Artist of the application.
+ * The Artist class represents an Artist of songs.
  *
  */
 
-interface Artist {
+interface Artist : Person {
 
     // Artist object constructor
-    fun Artist(name : String, albums : List<Album>, songs : List<Song>, image : String, description : String)
-
-    // Return the name of Artist
-    fun getName(): String
+    fun Artist(id : String, name : String, bio : String, albums : List<Album>, songs : List<Song>,
+               image : String)
 
     // Return the Albums of Artist
     fun getAlbums(): List<Album>
@@ -22,9 +20,6 @@ interface Artist {
 
     // Return the Image's Artist
     fun getImage(): String
-
-    // Return the Description's Artist
-    fun getDescription(): String
 
 
 }

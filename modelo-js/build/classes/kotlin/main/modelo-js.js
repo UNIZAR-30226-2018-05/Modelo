@@ -31,13 +31,20 @@ this['modelo-js'] = function (_, Kotlin) {
   Artist.$metadata$ = {
     kind: Kind_INTERFACE,
     simpleName: 'Artist',
-    interfaces: []
+    interfaces: [Person]
   };
   function Facade() {
   }
   Facade.$metadata$ = {
     kind: Kind_INTERFACE,
     simpleName: 'Facade',
+    interfaces: []
+  };
+  function Person() {
+  }
+  Person.$metadata$ = {
+    kind: Kind_INTERFACE,
+    simpleName: 'Person',
     interfaces: []
   };
   function Song() {
@@ -66,7 +73,7 @@ this['modelo-js'] = function (_, Kotlin) {
   User.$metadata$ = {
     kind: Kind_INTERFACE,
     simpleName: 'User',
-    interfaces: []
+    interfaces: [Person]
   };
   var package$cierzo = _.cierzo || (_.cierzo = {});
   var package$modelo = package$cierzo.modelo || (package$cierzo.modelo = {});
@@ -77,6 +84,7 @@ this['modelo-js'] = function (_, Kotlin) {
   package$interfaces.Album = Album;
   package$interfaces.Artist = Artist;
   package$interfaces.Facade = Facade;
+  package$interfaces.Person = Person;
   package$interfaces.Song = Song;
   package$interfaces.SongList = SongList;
   package$interfaces.SongListWithImage = SongListWithImage;

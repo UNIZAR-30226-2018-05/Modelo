@@ -2,27 +2,18 @@ package cierzo.modelo.interfaces
 
 /**
  *
- * The User class represents the client of the application.
+ * The User class represents the person who use the application.
  *
  */
 
 
-interface User {
+interface User : Person {
 
     // User object constructor
-    fun User(id : String, username : String, name : String, bio : String, mail : String, friends : List<User>)
-
-    // Returns User's id
-    fun getId() : String
+    fun User(id : String, name : String, bio : String, username : String, mail : String, friends : List<User>)
 
     // Returns User's nickname
     fun getUsername() : String
-
-    // Returns User's name
-    fun getName() : String
-
-    // Returns User's bio
-    fun getBio() : String
 
     // Returns User's mail
     fun getMail() : String
