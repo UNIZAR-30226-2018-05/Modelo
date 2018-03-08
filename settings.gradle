@@ -1,0 +1,3 @@
+rootProject.name = 'modelo'
+
+include 'modelo-jvm', 'modelo-js'

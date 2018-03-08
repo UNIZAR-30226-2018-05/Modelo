@@ -1,3 +1,5 @@
+package cierzo.modelo.interfaces
+
 /**
  *
  * The User class represents the client of the application.
