@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
 
+# Directory
+build/
+modelo-jvm/build/
+modelo-js/build/
+
 # Log file
 *.log
 
