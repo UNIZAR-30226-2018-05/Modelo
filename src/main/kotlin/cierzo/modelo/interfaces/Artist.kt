@@ -2,23 +2,32 @@ package cierzo.modelo.interfaces
 
 /**
  *
- * The Artist class represents an Artist of songs.
+ * La clase Artist representa a un artista o grupo que crean canciones.
  *
  */
 
 interface Artist : Person {
 
-    // Artist object constructor
-    fun Artist(id : String, name : String, bio : String, albums : List<Album>, songs : List<Song>,
+    /**
+     * @param albums: Lista de IDs de los álbumes del artista.
+     * @param songs: Lista de IDs de las canciones del artista.
+     */
+    fun Artist(id : String, name : String, bio : String, albums : List<String>, songs : List<String>,
                image : String)
 
-    // Return the Albums of Artist
-    fun getAlbums(): List<Album>
+    /**
+     * Obtiene del servidor la lista de álumes a partir de sus IDs.
+     */
+    fun getAlbums(): List<SongList>
 
-    // Return the Songs of Artist
+    /**
+     * Obtiene del servidor la lista de canciones a partir de sus IDs.
+     */
     fun getSongs(): List<Song>
 
-    // Return the Image's Artist
+    /**
+     * Devuevle la imagen del artista.
+     */
     fun getImage(): String
 
 

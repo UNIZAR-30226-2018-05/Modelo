@@ -1,16 +1,26 @@
 package cierzo.modelo.interfaces
 
+/**
+ * La interfaz Persona define a una persona
+ */
+
 interface Person {
 
-    fun Person(id: String, name : String, bio : String)
+    fun Person(id: String, name: String, bio: String)
 
-    // Returns User's id
+    /**
+     * Devuelve la ID de la persona.
+     */
     fun getId() : String
 
-    // Returns User's name
+    /**
+     * Devuelve el nombre de la persona.
+     */
     fun getName() : String
 
-    // Returns User's bio
+    /**
+     * Devuelve la descripción biográfica de la persona.
+     */
     fun getBio() : String
 
 }

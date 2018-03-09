@@ -2,7 +2,7 @@ package cierzo.modelo.interfaces
 
 /**
  *
- * The Song class represents songs of the application.
+ * La clase Song representa una canción disponible en la aplicación
  *
  */
 
@@ -10,27 +10,46 @@ package cierzo.modelo.interfaces
 interface Song {
 
 
-    fun Song(id : String, name : String, lenght : Int, author : List<Artist>, genre : String, album : Album,
+    /**
+     * @param author: Lista de IDs de los autores de la canción.
+     * @param album: ID del álbum al que pertenece una canción, si pertenece a alguno. Sino, null.
+     */
+    fun Song(id: String, name: String, length: Int, author: List<String>, genre: String, album: String?,
              image : String)
 
+    /**
+     * Devuelve la ID de la canción.
+     */
     fun getId(): String
 
-    // Return the name of song
+    /**
+     * Devuelve e nombre de la canción.
+     */
     fun getName(): String
 
-    // Return the Artist or the Artists of song
+    /**
+     * Obtiene del servidor la lista de artistas autores de la canción.
+     */
     fun getArtist(): List<Artist>
 
-    // Return the Album of song
-    fun getAlbum(): Album
+    /**
+     * Obtiene del servidor el álbum al que pertenece la canción.
+     */
+    fun getAlbum(): SongList
 
-    // Return the Genre of song
+    /**
+     * Devuelve el género de la canción.
+     */
     fun getGenre(): String
 
-    // Return the Duration of song (in Seconds)
-    fun getLenght(): Int
+    /**
+     * Devuelve la duración (en segundos) de la canción.
+     */
+    fun getLength(): Int
 
-    // Return the Cover's song
+    /**
+     * Devuelve la carátula de la canción.
+     */
     fun getImage(): String
 
 }

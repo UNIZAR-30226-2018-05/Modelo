@@ -2,23 +2,31 @@ package cierzo.modelo.interfaces
 
 /**
  *
- * The User class represents the person who use the application.
+ * La clase usuario representa a una persona que usa la aplicación.
  *
  */
 
 
 interface User : Person {
 
-    // User object constructor
-    fun User(id : String, name : String, bio : String, username : String, mail : String, friends : List<User>)
+    /**
+     * @param friends: Lista de IDs de los usuarios amigos.
+     */
+    fun User(id: String, name: String, bio: String, username: String, mail: String, friends: List<String>)
 
-    // Returns User's nickname
-    fun getUsername() : String
+    /**
+     * Devuelve el nickname del usuario.
+     */
+    fun getUsername(): String
 
-    // Returns User's mail
-    fun getMail() : String
+    /**
+     * Devuelve el correo electrónico del usuario.
+     */
+    fun getMail(): String
 
-    // Returns list of User's friends
-    fun getFriends() : List<User>
+    /**
+     * Obtiene del servidor la lista de usuarios amigos.
+     */
+    fun getFriends(): List<User>
 
 }
