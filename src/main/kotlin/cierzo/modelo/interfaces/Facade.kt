@@ -197,7 +197,7 @@ interface Facade{
      * Param:
      * @param idUser: id's user
      */
-    fun myAccountInfo(idUser: String)
+    fun myAccountInfo(idUser: String): User
 
     /**
      * Call the API to update details user
