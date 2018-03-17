@@ -1,8 +1,12 @@
-package cierzo.modelo.interfaces
+package cierzo.modelo
 
-import cierzo.modelo.util.File
+import cierzo.modelo.interfaces.Artist
+import cierzo.modelo.interfaces.Song
+import cierzo.modelo.interfaces.SongList
+import cierzo.modelo.interfaces.User
+import org.w3c.files.File
 
-interface Facade{
+interface FacadeInterface{
 
     /********************************************************************/
     /**                        SONGS                                    */
@@ -48,7 +52,7 @@ interface Facade{
      * Param:
      * @param id: Identificator's songs
      */
-    fun fethSongFile(id: String): File
+    fun fetchSongFile(id: String): File
 
     /********************************************************************/
     /**                        PLAYLISTS                                */

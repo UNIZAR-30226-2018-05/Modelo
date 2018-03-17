@@ -1,6 +1,5 @@
 package cierzo.modelo.interfaces
 
-import cierzo.modelo.util.Date
 
 /**
  *
@@ -16,7 +15,7 @@ interface SongList {
      * @param owner: ID del dueño de la lista.
      * @param image: ¿URL? de la imagen de cabecera de la lista, si dispone de ella. Sino, null.
      */
-    fun SongList(name: String, songs: List<String>, creationDate: Date, description: String, owner: String,
+    fun SongList(name: String, songs: List<String>, creationDate: String, description: String, owner: String,
                  image: String?)
 
     /**
@@ -37,7 +36,7 @@ interface SongList {
     /**
      * Devuelve la fecha de creación de la lista.
      */
-    fun getCreationDate(): Date
+    fun getCreationDate(): String
 
     /**
      * Devuelve la descripción de la lista.
