@@ -1,3 +1,5 @@
+Con el cambio en la estructura de la capa de Modelo este repositorio pasará a estar inactivo, archivado y únicamente para lectura.
+
 # Modelo
 
 Capa de modelo del Proyecto Cierzo. Intermediaria entre la vista y la API.
